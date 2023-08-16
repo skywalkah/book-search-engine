@@ -6,7 +6,7 @@ const expiration = '2h';
 
 module.exports = {
   // function to decode the token and get the user
-  authMiddleware: function (req) {
+  authMiddleware: function ({ req }) {
     let token = req.headers.authorization || '';
 
     // ["Bearer", "<tokenvalue>"]
